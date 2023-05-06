@@ -25,7 +25,7 @@ export class HeroService {
     console.log('getHeroees service')
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
-        tap(h => this.log(`fetched heroes${h}${console.log(h)}`)),
+        tap(h => this.log(`fetched heroes28: ${JSON.stringify(h)}}`)),
         catchError(this.handleError<Hero[]>('getHeroes', []))
       )
   }
@@ -114,7 +114,7 @@ export class HeroService {
   }
 
   private log(message: string) {
-
-    this.messageService.add(`HeroService: ${message}`);
+    console.log(message);
+    this.messageService.add(`HeroService 118: ${message}`);
   }
 }

@@ -37,8 +37,8 @@ export class AppComponent implements OnInit {
   data: number[] = [];
 
   ngOnInit(): void {
-    // this.observer.subscribe((val) => this.data.push(val));
-    // console.log(this.data);
+    this.observer.subscribe((val) => this.data.push(val as number));
+    console.log(this.data);
     this.customOperator(this.observer).subscribe((i) => console.log(i))
   }
 }

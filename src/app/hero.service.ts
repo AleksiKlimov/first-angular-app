@@ -103,7 +103,7 @@ export class HeroService {
   * @returns - to chto prishlo from result
   */
   private handleError<T>(operation = 'operation', result?: T) {
-    console.log('handleError work service', operation, result)
+    console.log('handleError work service 1036', operation, result)
     return (error: any): Observable<T> => {
       console.error(error);
 
